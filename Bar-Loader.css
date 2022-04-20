@@ -1,0 +1,42 @@
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+.Loader{
+    height: 400px;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+
+.Line{
+    display: inline-block;
+    width: 10px;
+    height: 50px;
+    background-color: lightgray;
+    border-radius: 10px;
+    animation: scale-up 1s linear infinite;
+}
+
+.Line:nth-child(2){
+    height: 60px;
+    margin: 0 5px;
+    animation-delay: .25s;
+}
+
+.Line:nth-child(3){
+    animation-delay: .5s;
+}
+
+@keyframes scale-up {
+    20%{
+        background-color: white;
+        transform: scaleY(1.5);
+    }
+    40%{
+        transform: scaleY(1);
+    }
+}
